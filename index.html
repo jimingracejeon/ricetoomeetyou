@@ -418,6 +418,7 @@ select:focus,input[type=text]:focus,textarea:focus{outline:none;border-color:var
 <a href="#" onclick="return showPage('share')" data-page="share"><i class="fas fa-users"></i> Community</a>
 <a href="#" onclick="return showPage('discover')" data-page="discover"><i class="fas fa-map-marker-alt"></i> Discover</a>
 <a href="#" onclick="return showPage('dictionary')" data-page="dictionary"><i class="fas fa-book"></i> Dictionary</a>
+<a href="#" onclick="openSettings()" data-page="settings"><i class="fas fa-cog"></i> Settings</a>
 </div>
 <button class="camera-btn" onclick="openGeminiCamera()" title="Open Google Gemini Camera">
 <i class="fas fa-camera"></i>
@@ -469,7 +470,7 @@ select:focus,input[type=text]:focus,textarea:focus{outline:none;border-color:var
 <a href="#" onclick="return showPage('replace')" data-page="replace"><i class="fas fa-exchange-alt"></i>Replace</a>
 <a href="#" onclick="return showPage('share')" data-page="share"><i class="fas fa-users"></i>Community</a>
 <a href="#" onclick="return showPage('discover')" data-page="discover"><i class="fas fa-camera"></i>Discover</a>
-<a href="#" onclick="return showPage('dictionary')" data-page="dictionary"><i class="fas fa-book"></i>Dict</a>
+<a href="#" onclick="openShopping()" data-page="shopping"><i class="fas fa-shopping-cart"></i>Shop</a>
 </div>
 </nav>
 
@@ -885,7 +886,7 @@ select:focus,input[type=text]:focus,textarea:focus{outline:none;border-color:var
 <div class="dict-content active" id="dict-types">
 <div class="bibimbap-type">
 <div class="type-header">
-<div class="type-emoji">??</div>
+<div class="type-emoji">🍲</div>
 <div>
 <div class="type-name">Jeonju Bibimbap</div>
 <div class="type-region">Jeonju, North Jeolla Province</div>
@@ -893,18 +894,18 @@ select:focus,input[type=text]:focus,textarea:focus{outline:none;border-color:var
 </div>
 <p class="type-desc">The most famous and authentic version. Features raw beef (yukhoe) on top, never gochujang-mixed. The bowl is served at room temperature, and diners mix everything together at the table.</p>
 <div class="type-ingredients">
-<div class="ingredient-tag">?? Raw Beef</div>
-<div class="ingredient-tag">?? Fried Egg</div>
-<div class="ingredient-tag">?? Gosari</div>
-<div class="ingredient-tag">?? Bean Sprouts</div>
-<div class="ingredient-tag">?? Sesame Oil</div>
-<div class="ingredient-tag">??? Gochujang (on side)</div>
+<div class="ingredient-tag">🥩 Raw Beef</div>
+<div class="ingredient-tag">🍳 Fried Egg</div>
+<div class="ingredient-tag">🍃 Gosari</div>
+<div class="ingredient-tag">🌱 Bean Sprouts</div>
+<div class="ingredient-tag">🧂 Sesame Oil</div>
+<div class="ingredient-tag">🌶️ Gochujang (on side)</div>
 </div>
 </div>
 
 <div class="bibimbap-type">
 <div class="type-header">
-<div class="type-emoji">???</div>
+<div class="type-emoji">🌶️</div>
 <div>
 <div class="type-name">Busan Bibimbap</div>
 <div class="type-region">Busan, South Gyeongsang Province</div>
@@ -1453,13 +1454,11 @@ function toggleDarkMode(){
 }
 
 function openShopping(){
-  alert('?�� Shopping Feature Coming Soon!\n\n' +
-    'Soon you\'ll be able to:\n' +
-    '??Buy Korean ingredients online\n' +
-    '??Find local stores\n' +
-    '??Order delivery\n' +
-    '??Compare prices\n\n' +
-    'Stay tuned! ?��');
+  window.open('https://koreanssan.com/', '_blank');
+}
+
+function openSettings(){
+  document.getElementById('language-modal').classList.add('show');
 }
 
 // ========== NAVIGATION ==========
