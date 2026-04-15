@@ -291,6 +291,17 @@ select:focus,input[type=text]:focus,textarea:focus{outline:none;border-color:var
 .time-val{font-weight:700;color:var(--green);font-size:1.1rem}
 .time-lbl{font-size:.8rem;color:var(--gray)}
 
+.dict-recipes-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px;margin-bottom:24px}
+.recipe-card-compact{background:#fff;border-radius:16px;overflow:hidden;border:1px solid #eee;cursor:pointer;transition:.3s;display:flex;flex-direction:column}
+.recipe-card-compact:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,.1)}
+.recipe-card-compact .recipe-img{width:100%;height:160px;background:linear-gradient(135deg,var(--green),var(--orange));display:flex;align-items:center;justify-content:center;font-size:3rem;color:#fff}
+.recipe-card-compact .recipe-info{padding:12px}
+.recipe-card-compact h4{font-size:.95rem;font-weight:700;margin:0 0 6px;line-height:1.3}
+.recipe-card-compact p{font-size:.8rem;color:var(--gray);margin:0}
+.recipe-detail{padding:24px}
+.recipe-detail h2{margin-bottom:16px;font-size:1.4rem;font-weight:700}
+.recipe-detail .cook-time{margin-bottom:24px}
+
 .ingredient-info{background:#fff;border-radius:16px;padding:20px;border:1px solid #eee;margin-bottom:12px;display:flex;gap:16px}
 .ingredient-info .left{text-align:center;min-width:80px}
 .ingredient-info .emoji{font-size:2.5rem;margin-bottom:8px}
@@ -723,7 +734,7 @@ select:focus,input[type=text]:focus,textarea:focus{outline:none;border-color:var
 <!-- ===== SHARE (COMMUNITY) ===== -->
 <div class="page" id="page-share">
 <div class="page-header">
-<h2>?뙇 Global Bibimbap Community</h2>
+<h2>🌍 Global Bibimbap Community</h2>
 <p>Share your vision, vote on ideas, and inspire others worldwide.</p>
 </div>
 
@@ -967,61 +978,38 @@ select:focus,input[type=text]:focus,textarea:focus{outline:none;border-color:var
 
 <!-- RECIPES TAB -->
 <div class="dict-content" id="dict-recipes">
-<div class="recipe-card">
-<h3><i class="fas fa-book" style="color:var(--green)"></i> Classic Jeonju Bibimbap</h3>
-<div class="cook-time">
-<div class="time-item"><div class="time-val">30 min</div><div class="time-lbl">Prep Time</div></div>
-<div class="time-item"><div class="time-val">15 min</div><div class="time-lbl">Cook Time</div></div>
-<div class="time-item"><div class="time-val">4 kcal</div><div class="time-lbl">Servings</div></div>
+<div class="dict-recipes-grid">
+<div class="recipe-card-compact" onclick="showRecipeDetail('jeonju')">
+<div class="recipe-img">🍲</div>
+<div class="recipe-info">
+<h4>Classic Jeonju Bibimbap</h4>
+<p>Traditional version with raw beef</p>
 </div>
-<ol class="recipe-steps">
-<li><strong>Prepare rice:</strong> Cook 2 cups of rice using the 2:1 water-to-rice ratio. Keep warm but don't use hot rice.</li>
-<li><strong>Cook vegetables:</strong> Separately cook each namul (gosari, bean sprouts, spinach). Blanch for 2-3 minutes in salted boiling water, drain, and season with sesame oil, garlic, and salt.</li>
-<li><strong>Prepare protein:</strong> Slice raw beef thinly and season with soy sauce, sesame oil, and garlic. Let marinate for 10 minutes.</li>
-<li><strong>Fry egg:</strong> Fry an egg sunny-side up in a separate pan.</li>
-<li><strong>Assemble bowl:</strong> Place warm rice in a regular bowl (NOT heated stone). Arrange each ingredient (gosari, beef, spinach, bean sprouts) in separate sections on top.</li>
-<li><strong>Top with egg:</strong> Place fried egg in the center of the bowl.</li>
-<li><strong>Add sauce:</strong> Place a spoonful of gochujang on the side of the bowl ??mix just before eating!</li>
-<li><strong>Final touch:</strong> Drizzle with toasted sesame oil. Never mix until the diner is ready to eat.</li>
-</ol>
 </div>
 
-<div class="recipe-card">
-<h3><i class="fas fa-fire" style="color:var(--orange)"></i> Dolsot (Stone Pot) Bibimbap</h3>
-<div class="cook-time">
-<div class="time-item"><div class="time-val">20 min</div><div class="time-lbl">Prep Time</div></div>
-<div class="time-item"><div class="time-val">10 min</div><div class="time-lbl">Cook Time</div></div>
-<div class="time-item"><div class="time-val">4 kcal</div><div class="time-lbl">Servings</div></div>
+<div class="recipe-card-compact" onclick="showRecipeDetail('dolsot')">
+<div class="recipe-img">🔥</div>
+<div class="recipe-info">
+<h4>Dolsot (Stone Pot) Bibimbap</h4>
+<p>Crispy, sizzling stone bowl</p>
 </div>
-<ol class="recipe-steps">
-<li><strong>Heat stone bowl:</strong> Place an earthenware stone bowl (dolsot) in a 400째F (200째C) oven or on stovetop for 5 minutes until very hot.</li>
-<li><strong>Prepare ingredients:</strong> Have all vegetables, beef, egg, and sauce ready.</li>
-<li><strong>Add oil to bowl:</strong> Drizzle 1 tablespoon of sesame oil into the hot stone bowl (it will sizzle).</li>
-<li><strong>Layer rice:</strong> Quickly add 1.5 cups cooked rice to the hot bowl. The bottom will immediately start to crisp and brown.</li>
-<li><strong>Add toppings:</strong> Arrange all prepared ingredients on top. Don't stir ??let the rice continue to crisp for 2-3 minutes.</li>
-<li><strong>Fry egg in the bowl:</strong> Crack an egg directly onto the rice in the center. It will cook from the bowl's heat.</li>
-<li><strong>Add gochujang:</strong> Place a spoonful of gochujang on top. Drizzle with more sesame oil.</li>
-<li><strong>Serve immediately:</strong> Bring to table still sizzling. Mix well and enjoy the crispy rice layer at the bottom!</li>
-</ol>
 </div>
 
-<div class="recipe-card">
-<h3><i class="fas fa-leaf" style="color:var(--green)"></i> Vegetarian Temple Bibimbap</h3>
-<div class="cook-time">
-<div class="time-item"><div class="time-val">25 min</div><div class="time-lbl">Prep Time</div></div>
-<div class="time-item"><div class="time-val">15 min</div><div class="time-lbl">Cook Time</div></div>
-<div class="time-item"><div class="time-val">4 kcal</div><div class="time-lbl">Servings</div></div>
+<div class="recipe-card-compact" onclick="showRecipeDetail('vegetarian')">
+<div class="recipe-img">🌿</div>
+<div class="recipe-info">
+<h4>Vegetarian Temple Bibimbap</h4>
+<p>Mountain vegetables only</p>
 </div>
-<ol class="recipe-steps">
-<li><strong>Cook wild vegetables:</strong> Use gosari, doraji, spinach, and any wild greens available. Blanch each separately for 2-3 minutes.</li>
-<li><strong>Season vegetables:</strong> Dress each with sesame oil, garlic, salt, and a touch of soy sauce.</li>
-<li><strong>Prepare mushrooms:</strong> Slice shiitake mushrooms and saut챕 in sesame oil until golden.</li>
-<li><strong>Make egg:</strong> Fry or prepare an egg (or use tofu for fully vegan version).</li>
-<li><strong>Prepare rice:</strong> Use brown rice or herbal rice for added nutrition.</li>
-<li><strong>Assemble:</strong> Layer rice in bowl, arrange each vegetable in sections, top with mushrooms and egg.</li>
-<li><strong>Sauce option:</strong> Use gochujang or a simple sesame-soy sauce for mixing.</li>
-<li><strong>Serve:</strong> Let diner mix according to preference.</li>
-</ol>
+</div>
+</div>
+
+<!-- Recipe Detail Modal -->
+<div id="recipe-detail-modal" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.5);z-index:1000;overflow-y:auto;align-items:center;justify-content:center">
+<div style="background:#fff;border-radius:20px;max-width:700px;width:90%;margin:20px auto;position:relative">
+<button onclick="document.getElementById('recipe-detail-modal').style.display='none'" style="position:absolute;top:16px;right:16px;border:none;background:none;font-size:1.5rem;cursor:pointer">×</button>
+<div id="recipe-detail-content" class="recipe-detail"></div>
+</div>
 </div>
 </div>
 
@@ -1159,7 +1147,7 @@ select:focus,input[type=text]:focus,textarea:focus{outline:none;border-color:var
 
 <!-- HOW TO EAT TAB -->
 <div class="dict-content" id="dict-eating">
-<h3 style="margin-bottom:20px">?뜶 The Art of Eating Bibimbap</h3>
+<h3 style="margin-bottom:20px">🥢 The Art of Eating Bibimbap</h3>
 
 <div class="eating-guide">
 <div class="eating-step">
@@ -1864,6 +1852,81 @@ function switchDictTab(tabName, target){
   document.querySelectorAll('.dict-tab').forEach(t=>t.classList.remove('active'));
   document.getElementById('dict-'+tabName).classList.add('active');
   if(target) target.classList.add('active');
+}
+
+const recipeData = {
+  jeonju: {
+    title: 'Classic Jeonju Bibimbap',
+    emoji: '🍲',
+    prep: '30 min',
+    cook: '15 min',
+    servings: '4',
+    steps: [
+      'Prepare rice: Cook 2 cups of rice using the 2:1 water-to-rice ratio. Keep warm but don\'t use hot rice.',
+      'Cook vegetables: Separately cook each namul (gosari, bean sprouts, spinach). Blanch for 2-3 minutes in salted boiling water, drain, and season with sesame oil, garlic, and salt.',
+      'Prepare protein: Slice raw beef thinly and season with soy sauce, sesame oil, and garlic. Let marinate for 10 minutes.',
+      'Fry egg: Fry an egg sunny-side up in a separate pan.',
+      'Assemble bowl: Place warm rice in a regular bowl (NOT heated stone). Arrange each ingredient (gosari, beef, spinach, bean sprouts) in separate sections on top.',
+      'Top with egg: Place fried egg in the center of the bowl.',
+      'Add sauce: Place a spoonful of gochujang on the side of the bowl - mix just before eating!',
+      'Final touch: Drizzle with toasted sesame oil. Never mix until the diner is ready to eat.'
+    ]
+  },
+  dolsot: {
+    title: 'Dolsot (Stone Pot) Bibimbap',
+    emoji: '🔥',
+    prep: '20 min',
+    cook: '10 min',
+    servings: '4',
+    steps: [
+      'Heat stone bowl: Place an earthenware stone bowl (dolsot) in a 400°F (200°C) oven or on stovetop for 5 minutes until very hot.',
+      'Prepare ingredients: Have all vegetables, beef, egg, and sauce ready.',
+      'Add oil to bowl: Drizzle 1 tablespoon of sesame oil into the hot stone bowl (it will sizzle).',
+      'Layer rice: Quickly add 1.5 cups cooked rice to the hot bowl. The bottom will immediately start to crisp and brown.',
+      'Add toppings: Arrange all prepared ingredients on top. Don\'t stir - let the rice continue to crisp for 2-3 minutes.',
+      'Fry egg in the bowl: Crack an egg directly onto the rice in the center. It will cook from the bowl\'s heat.',
+      'Add gochujang: Place a spoonful of gochujang on top. Drizzle with more sesame oil.',
+      'Serve immediately: Bring to table still sizzling. Mix well and enjoy the crispy rice layer at the bottom!'
+    ]
+  },
+  vegetarian: {
+    title: 'Vegetarian Temple Bibimbap',
+    emoji: '🌿',
+    prep: '25 min',
+    cook: '15 min',
+    servings: '4',
+    steps: [
+      'Cook wild vegetables: Use gosari, doraji, spinach, and any wild greens available. Blanch each separately for 2-3 minutes.',
+      'Season vegetables: Dress each with sesame oil, garlic, salt, and a touch of soy sauce.',
+      'Prepare mushrooms: Slice shiitake mushrooms and sauté in sesame oil until golden.',
+      'Make egg: Fry or prepare an egg (or use tofu for fully vegan version).',
+      'Prepare rice: Use brown rice or herbal rice for added nutrition.',
+      'Assemble: Layer rice in bowl, arrange each vegetable in sections, top with mushrooms and egg.',
+      'Sauce option: Use gochujang or a simple sesame-soy sauce for mixing.',
+      'Serve: Let diner mix according to preference.'
+    ]
+  }
+};
+
+function showRecipeDetail(recipeId){
+  const recipe = recipeData[recipeId];
+  if(!recipe) return;
+  
+  let html = `<h2>${recipe.emoji} ${recipe.title}</h2>
+    <div class="cook-time">
+      <div class="time-item"><div class="time-val">${recipe.prep}</div><div class="time-lbl">Prep Time</div></div>
+      <div class="time-item"><div class="time-val">${recipe.cook}</div><div class="time-lbl">Cook Time</div></div>
+      <div class="time-item"><div class="time-val">${recipe.servings}</div><div class="time-lbl">Servings</div></div>
+    </div>
+    <ol class="recipe-steps">`;
+  
+  recipe.steps.forEach((step, i) => {
+    html += `<li><strong>Step ${i+1}:</strong> ${step}</li>`;
+  });
+  
+  html += '</ol>';
+  document.getElementById('recipe-detail-content').innerHTML = html;
+  document.getElementById('recipe-detail-modal').style.display = 'flex';
 }
 
 // ========== DISCOVER TAB SWITCHING ==========
