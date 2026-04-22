@@ -438,12 +438,12 @@ select:focus,input[type=text]:focus,textarea:focus{outline:none;border-color:var
 <button class="sidebar-close" onclick="closeSidebar()"><i class="fas fa-times"></i></button>
 </div>
 <div class="sidebar-content">
-<div class="sidebar-category active" onclick="filterByCategory('all', this)">?? ALL</div>
-<div class="sidebar-category" onclick="showPage('dictionary')">?? DICTIONARY</div>
-<div class="sidebar-category" onclick="showPage('discover');switchDiscoverTab('camera', this)">??? Nearby Bibimbap</div>
-<div class="sidebar-category" onclick="showPage('share')">?? MY RICE (Community)</div>
-<div class="sidebar-category" onclick="showPage('personalize')">????? RECIPE</div>
-<div class="sidebar-category" onclick="openShopping()">?? SHOPPING</div>
+<div class="sidebar-category active" onclick="filterByCategory('all', this)">ALL</div>
+<div class="sidebar-category" onclick="showPage('dictionary')">DICTIONARY</div>
+<div class="sidebar-category" onclick="showPage('discover');switchDiscoverTab('camera', this)">Nearby Bibimbap</div>
+<div class="sidebar-category" onclick="showPage('share')">MY RICE (Community)</div>
+<div class="sidebar-category" onclick="showPage('personalize')">RECIPE</div>
+<div class="sidebar-category" onclick="openShopping()">SHOPPING</div>
 
 <div class="sidebar-divider"></div>
 
@@ -534,16 +534,16 @@ select:focus,input[type=text]:focus,textarea:focus{outline:none;border-color:var
         <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80" alt="Jeonju bibimbap" />
         <div class="marquee-content">
           <h4>Jeonju Spicy Signature</h4>
-          <div class="rating">�ڡڡڡڡ�<span>4.9</span></div>
-          <p>Perfect balance of heat and texture ? every spoonful tastes like Seoul street food.</p>
+          <div class="rating">★★★★★<span>4.9</span></div>
+          <p>Perfect balance of heat and texture - every spoonful tastes like Seoul street food.</p>
         </div>
       </div>
       <div class="marquee-card">
         <img src="https://images.unsplash.com/photo-1585238342021-7d49be42b4ae?auto=format&fit=crop&w=800&q=80" alt="Vegetable bibimbap" />
         <div class="marquee-content">
           <h4>Garden Veggie Bibimbap</h4>
-          <div class="rating">�ڡڡڡڡ�<span>4.7</span></div>
-          <p>Fresh, colorful, and light ? the vegetable mix is crisp and incredibly satisfying.</p>
+          <div class="rating">★★★★★<span>4.7</span></div>
+          <p>Fresh, colorful, and light - the vegetable mix is crisp and incredibly satisfying.</p>
         </div>
       </div>
       <div class="marquee-card">
@@ -558,8 +558,8 @@ select:focus,input[type=text]:focus,textarea:focus{outline:none;border-color:var
         <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?auto=format&fit=crop&w=800&q=80" alt="Stone pot bibimbap" />
         <div class="marquee-content">
           <h4>Stone Pot Crisp</h4>
-          <div class="rating">�ڡڡڡڡ�<span>4.9</span></div>
-          <p>The sizzling rice bottom is amazing ? rich, savory, and perfectly crunchy.</p>
+          <div class="rating">★★★★★<span>4.9</span></div>
+          <p>The sizzling rice bottom is amazing - rich, savory, and perfectly crunchy.</p>
         </div>
       </div>
     </div>
@@ -590,7 +590,7 @@ select:focus,input[type=text]:focus,textarea:focus{outline:none;border-color:var
 <!-- ===== PERSONALIZE ===== -->
 <div class="page" id="page-personalize">
 <div class="page-header">
-<h2>?? Personalize Your Bowl</h2>
+<h2>Personalize Your Bowl</h2>
 <p>Tell us about yourself and we'll craft the perfect bibimbap for you.</p>
 </div>
 
@@ -645,14 +645,14 @@ select:focus,input[type=text]:focus,textarea:focus{outline:none;border-color:var
 <div class="form-group">
 <label>Allergies (select all that apply)</label>
 <div class="chip-group" id="allergy-chips">
-<div class="chip" onclick="toggleChip(this)">?? Peanuts</div>
-<div class="chip" onclick="toggleChip(this)">?? Eggs</div>
-<div class="chip" onclick="toggleChip(this)">?? Shellfish</div>
-<div class="chip" onclick="toggleChip(this)">?? Gluten</div>
-<div class="chip" onclick="toggleChip(this)">?? Dairy</div>
-<div class="chip" onclick="toggleChip(this)">?? Soy</div>
-<div class="chip" onclick="toggleChip(this)">?? Tree Nuts</div>
-<div class="chip" onclick="toggleChip(this)">?? Sesame</div>
+<div class="chip" onclick="toggleChip(this)">Peanuts</div>
+<div class="chip" onclick="toggleChip(this)">Eggs</div>
+<div class="chip" onclick="toggleChip(this)">Shellfish</div>
+<div class="chip" onclick="toggleChip(this)">Gluten</div>
+<div class="chip" onclick="toggleChip(this)">Dairy</div>
+<div class="chip" onclick="toggleChip(this)">Soy</div>
+<div class="chip" onclick="toggleChip(this)">Tree Nuts</div>
+<div class="chip" onclick="toggleChip(this)">Sesame</div>
 </div>
 </div>
 <div class="form-group">
@@ -682,7 +682,7 @@ select:focus,input[type=text]:focus,textarea:focus{outline:none;border-color:var
 </div>
 
 <div class="result-bowl" id="bowl-result">
-<h3>?�� Your Personalized Bibimbap</h3>
+<h3>Your Personalized Bibimbap</h3>
 <div class="bowl-visual" id="bowl-items"></div>
 <div id="bowl-tags" style="margin-bottom:12px"></div>
 <p id="bowl-desc" style="font-size:.9rem;line-height:1.7;opacity:.9"></p>
@@ -696,7 +696,7 @@ select:focus,input[type=text]:focus,textarea:focus{outline:none;border-color:var
 <!-- ===== REPLACE ===== -->
 <div class="page" id="page-replace">
 <div class="page-header">
-<h2>?? Ingredient Swap Guide</h2>
+<h2>Ingredient Swap Guide</h2>
 <p>Can't find a Korean ingredient? We'll match it with a local alternative.</p>
 </div>
 
@@ -735,7 +735,7 @@ select:focus,input[type=text]:focus,textarea:focus{outline:none;border-color:var
 <!-- ===== SHARE (COMMUNITY) ===== -->
 <div class="page" id="page-share">
 <div class="page-header">
-<h2>?? Global Bibimbap Community</h2>
+<h2>Global Bibimbap Community</h2>
 <p>Share your vision, vote on ideas, and inspire others worldwide.</p>
 </div>
 
@@ -869,7 +869,7 @@ select:focus,input[type=text]:focus,textarea:focus{outline:none;border-color:var
 <!-- ===== DICTIONARY ===== -->
 <div class="page" id="page-dictionary">
 <div class="page-header">
-<h2>?? Bibimbap Encyclopedia</h2>
+<h2>Bibimbap Encyclopedia</h2>
 <p>Learn everything about bibimbap: types, recipes, ingredients, and traditions.</p>
 </div>
 
