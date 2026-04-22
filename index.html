@@ -1228,7 +1228,7 @@ select:focus,input[type=text]:focus,textarea:focus{outline:none;border-color:var
 <div class="modal-overlay" id="post-modal">
 <div class="modal">
 <button class="modal-close" onclick="closePostModal()"><i class="fas fa-times"></i></button>
-<h3>��?Share Your Bibimbap Innovation</h3>
+<h3>💡 Share Your Bibimbap Innovation</h3>
 <div class="form-group">
 <label>Idea Title</label>
 <input type="text" id="post-title" placeholder="e.g. Mediterranean Fusion Bibimbap">
@@ -1644,25 +1644,25 @@ function showSwaps(){
 
 // ========== SHARE (COMMUNITY) ==========
 const communityPosts=[
-  {user:'Alex C.',flag:'?��?��',location:'Mexico',avatar:'?��',category:'Flavor Combination',
+  {user:'Alex C.',flag:'🇲🇽',location:'Mexico',avatar:'👤',category:'Flavor Combination',
    title:'Tres Tacos Bibimbap: Mexican-Korean Fusion',vision:'Combine the taco tradition with bibimbap spirit. Use crispy tortilla shells as edible bowls, fill with Korean marinated beef, kimchi slaw, and gochujang-mayo.',upvotes:284,downvotes:12,comments:[
-     {user:'Maria',avatar:'?��',text:'This is genius! I tried it and my family went crazy!'},
-     {user:'David',avatar:'?��',text:'Where do you get the Korean crispy tortillas?'}
+     {user:'Maria',avatar:'👩',text:'This is genius! I tried it and my family went crazy!'},
+     {user:'David',avatar:'👨',text:'Where do you get the Korean crispy tortillas?'}
    ]},
-  {user:'Fatima K.',flag:'?��?��',location:'Riyadh',avatar:'?��',category:'Cultural Fusion',
+  {user:'Fatima K.',flag:'🇸🇦',location:'Riyadh',avatar:'👤',category:'Cultural Fusion',
    title:'Za\'atar Sesame Oil Bibimbap',vision:'Replace gochujang with a za\'atar-sesame oil dressing. Use hummus as base instead of rice. Add grilled vegetables, chickpeas, and tahini. A Middle Eastern take on Korean harmony.',upvotes:156,downvotes:8,comments:[
-     {user:'Ahmed',avatar:'?��',text:'This bridges our food cultures beautifully!'},
-     {user:'Lena',avatar:'?��',text:'The hummus base is so creamy!'}
+     {user:'Ahmed',avatar:'👤',text:'This bridges our food cultures beautifully!'},
+     {user:'Lena',avatar:'👩',text:'The hummus base is so creamy!'}
    ]},
-  {user:'Priya M.',flag:'?��?��',location:'Mumbai',avatar:'?��',category:'Ingredient Substitute',
+  {user:'Priya M.',flag:'🇮🇳',location:'Mumbai',avatar:'👤',category:'Ingredient Substitute',
    title:'Mango-Paneer Bowl: Tropical Twist',vision:'Replace raw beef with paneer. Use raw mango + mango pickle for tropical sweetness mixing with gochujang. Perfect for vegetarians in hot climates.',upvotes:342,downvotes:5,comments:[
-     {user:'Anita',avatar:'?��',text:'Finally a bibimbap for South Asia!'},
-     {user:'Ravi',avatar:'?��',text:'Adding pickle was brilliant'}
+     {user:'Anita',avatar:'👩',text:'Finally a bibimbap for South Asia!'},
+     {user:'Ravi',avatar:'👨',text:'Adding pickle was brilliant'}
    ]},
-  {user:'Tom L.',flag:'?��?��',location:'Berlin',avatar:'?��',category:'Health Benefit',
+  {user:'Tom L.',flag:'🇩🇪',location:'Berlin',avatar:'👤',category:'Health Benefit',
    title:'Probiotic Power Bibimbap',vision:'Add fermented elements: kimchi, sauerkraut, miso, and tempeh. Keep it vegan. The fermented ingredients boost digestion and gut health.',upvotes:198,downvotes:3,comments:[
-     {user:'Sophie',avatar:'?��',text:'I feel so much better after eating this!'},
-     {user:'Klaus',avatar:'?��',text:'Very German + Korean harmony'}
+     {user:'Sophie',avatar:'👩',text:'I feel so much better after eating this!'},
+     {user:'Klaus',avatar:'👨',text:'Very German + Korean harmony'}
    ]}
 ];
 
@@ -1674,7 +1674,7 @@ function renderPosts(){
         <div class="post-avatar" style="background:var(--green-pale);border:2px solid var(--green)">${p.avatar}</div>
         <div class="user-info">
           <h4>${p.user} ${p.flag}</h4>
-          <span>${p.location} ??${p.category}</span>
+          <span>${p.location} 📍${p.category}</span>
         </div>
       </div>
       <div class="post-body">
@@ -1683,16 +1683,16 @@ function renderPosts(){
       </div>
       <div class="vote-section">
         <button class="vote-btn" onclick="upvote(${i})" id="upvote-${i}">
-          <div class="vote-icon">?��</div>
+          <div class="vote-icon">👍</div>
           <span id="upvote-count-${i}">${p.upvotes}</span>
         </button>
         <button class="vote-btn" onclick="downvote(${i})" id="downvote-${i}">
-          <div class="vote-icon">?��</div>
+          <div class="vote-icon">👎</div>
           <span id="downvote-count-${i}">${p.downvotes}</span>
         </button>
       </div>
       <div class="comments-section">
-        <h5>?�� Comments (${p.comments.length})</h5>
+        <h5>💬 Comments (${p.comments.length})</h5>
         ${p.comments.map(c=>`
           <div class="comment">
             <div class="avatar">${c.avatar}</div>
@@ -1729,7 +1729,7 @@ function addComment(idx){
   const input=document.getElementById('comment-'+idx);
   const text=input.value.trim();
   if(!text)return;
-  communityPosts[idx].comments.push({user:'You',avatar:'?��',text});
+  communityPosts[idx].comments.push({user:'You',avatar:'👤',text});
   input.value='';
   renderPosts();
 }
@@ -1740,7 +1740,7 @@ function submitPost(){
   const title=document.getElementById('post-title').value||'My Idea';
   const category=document.getElementById('post-category').value||'Flavor Combination';
   const vision=document.getElementById('post-story').value||'Check out my innovation!';
-  communityPosts.unshift({user:'You',flag:'??',location:'Shared',avatar:'??',category,title,vision,upvotes:0,downvotes:0,comments:[]});
+  communityPosts.unshift({user:'You',flag:'🌍',location:'Shared',avatar:'👤',category,title,vision,upvotes:0,downvotes:0,comments:[]});
   renderPosts();
   closePostModal();
   document.getElementById('post-title').value='';
